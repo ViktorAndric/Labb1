@@ -13,17 +13,17 @@ namespace Labb1._2._0
             
             for (int startValue = 0; startValue < input.Length - 1; startValue++)
             {
-                for (int j = startValue + 1; j < input.Length; j++)
+                for (int endValue = startValue + 1; endValue < input.Length; endValue++)
                 {
-                    if (char.IsLetter(input[j]))
+                    if (char.IsLetter(input[endValue]))
                     {
                         break;
                     }
 
-                    if (input[startValue] == input[j])
+                    if (input[startValue] == input[endValue])
                     {
 
-                        strings.Add(input[startValue..(j + 1)]);
+                        strings.Add(input[startValue..(endValue + 1)]);
 
                         break;
                     }
